@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Equazioni di secondo grado</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#equazioni-di-secondo-grado">Equazioni di secondo grado</a>
+<ul>
+<li><a href="#definizione">Definizione</a></li>
+<li><a href="#metodo-risolutivo">Metodo risolutivo</a></li>
+<li><a href="#eccezioni">Eccezioni</a></li>
+<li><a href="#esempio">Esempio</a></li>
+<li><a href="#casi-particolari">Casi particolari</a>
+<ul>
+<li><a href="#equazione-pura-coefficiente-di-b-0">Equazione pura (Coefficiente di <span class="math inline">\(b =0\)</span>)</a></li>
+<li><a href="#equazione-spuria-coefficente-di-c0">Equazione spuria (coefficente di <span class="math inline">\(c=0\)</span>)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="equazioni-di-secondo-grado">Equazioni di secondo grado</h1>
+<h2 id="definizione">Definizione</h2>
+<p>Un equazione è un ugualianza tra due espressioni numerico-letterali, in cui il primo membro (l’espressione a sinistra) è perfettamente uguale al secondo membro (l’espressione a destra)</p>
+<h2 id="metodo-risolutivo">Metodo risolutivo</h2>
+<blockquote>
+<p><span class="math display">\[ax^2+bx+c=0 \]</span></p>
+</blockquote>
+<ol type="1">
+<li><p>Calcolo del <strong>Delta discriminante</strong> (<span class="math inline">\(\Delta\)</span>) <span class="math inline">\(\Delta = b^2-4ac\)</span></p></li>
+<li><p>Calcolo della soluzione <span class="math inline">\(x_{1/2} = \frac{-b\pm\sqrt{\Delta}}{2a}\)</span></p></li>
+</ol>
+<h2 id="eccezioni">Eccezioni</h2>
+<ol type="1">
+<li>Delta = 0 -&gt; le soluzioni sono <em>coincidenti</em> o la soluzione e’ doppia</li>
+<li>Delta negativo -&gt; l’equazione è <em>impossibile</em></li>
+</ol>
+<h2 id="esempio">Esempio</h2>
+<h4 id="x23x-10"><span class="math inline">\(4x^2+3x-1=0\)</span></h4>
+<blockquote>
+<p>[!NOTE] Soluzione <span class="math inline">\(\Delta = (+3)^2 - 4(+4)(-1) = +9+16 = 25\)</span> <span class="math inline">\(x_{1/2} = \frac{-(+3)\pm\sqrt{25}}{2(4)} = \frac{-3\pm5}{8}\)</span> <span class="math inline">\(x_1 = \frac{-3+5}{8} = \frac28 = \frac14\)</span> <span class="math inline">\(x_2 = \frac{-3-5}{8} = \frac{-8}{8} = -1\)</span></p>
+</blockquote>
+<h2 id="casi-particolari">Casi particolari</h2>
+<h3 id="equazione-pura-coefficiente-di-b-0">Equazione pura (Coefficiente di <span class="math inline">\(b =0\)</span>)</h3>
+<h5 id="x2-40"><span class="math inline">\(x^2-4=0\)</span></h5>
+<h5 id="soluzione-metodo-tradizionale">Soluzione (metodo tradizionale)</h5>
+<p><span class="math inline">\(\Delta = -4ac = 16\)</span>  <span class="math inline">\(x_{1/2}=\pm\frac{4}{2}\)</span>  <span class="math inline">\(x_1 = -2\)</span>  <span class="math inline">\(x_2 = 2\)</span> </p>
+<blockquote>
+<p>[!NOTE] Soluzione (metodo abbreviato) <span class="math inline">\(x^2 = 4\)</span> <span class="math inline">\(\sqrt{x^2} = \pm\sqrt4\)</span> <span class="math inline">\(x_{1/2} = \pm2\)</span></p>
+</blockquote>
+<h3 id="equazione-spuria-coefficente-di-c0">Equazione spuria (coefficente di <span class="math inline">\(c=0\)</span>)</h3>
+<h5 id="x2-7x0"><span class="math inline">\(x^2-7x=0\)</span></h5>
+<blockquote>
+<p>[!NOTE] Soluzione (metodo tradizionale) <span class="math inline">\(\Delta = 49\)</span> <span class="math inline">\(x_{1/2}=\frac{7\pm7}{2}\)</span> <span class="math inline">\(x_1 = 0\)</span> <span class="math inline">\(x_2 = 7\)</span></p>
+</blockquote>
+<blockquote>
+<p>[!NOTE] Soluzione (metodo abbreviato) <span class="math inline">\(x(x-7) = 0\)</span></p>
+<p><span class="math inline">\(x_1 = 0\)</span> <span class="math inline">\(x_2 = 7\)</span></p>
+</blockquote>
+</body>
+</html>

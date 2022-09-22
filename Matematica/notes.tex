@@ -1,0 +1,151 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\author{}
+\date{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{equazioni-di-secondo-grado}{%
+\section{Equazioni di secondo grado}\label{equazioni-di-secondo-grado}}
+
+\hypertarget{definizione}{%
+\subsection{Definizione}\label{definizione}}
+
+Un equazione è un ugualianza tra due espressioni numerico-letterali, in
+cui il primo membro (l'espressione a sinistra) è perfettamente uguale al
+secondo membro (l'espressione a destra)
+
+\hypertarget{metodo-risolutivo}{%
+\subsection{Metodo risolutivo}\label{metodo-risolutivo}}
+
+\begin{quote}
+\[ax^2+bx+c=0 \]
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Calcolo del \textbf{Delta discriminante} (\(\Delta\))
+  \(\Delta = b^2-4ac\)
+\item
+  Calcolo della soluzione \(x_{1/2} = \frac{-b\pm\sqrt{\Delta}}{2a}\)
+\end{enumerate}
+
+\hypertarget{eccezioni}{%
+\subsection{Eccezioni}\label{eccezioni}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Delta = 0 -\textgreater{} le soluzioni sono \emph{coincidenti} o la
+  soluzione e' doppia
+\item
+  Delta negativo -\textgreater{} l'equazione è \emph{impossibile}
+\end{enumerate}
+
+\hypertarget{esempio}{%
+\subsection{Esempio}\label{esempio}}
+
+\hypertarget{x23x-10}{%
+\paragraph{\texorpdfstring{\(4x^2+3x-1=0\)}{4x\^{}2+3x-1=0}}\label{x23x-10}}
+
+\begin{quote}
+{[}!NOTE{]} Soluzione \(\Delta = (+3)^2 - 4(+4)(-1) = +9+16 = 25\)
+\(x_{1/2} = \frac{-(+3)\pm\sqrt{25}}{2(4)} = \frac{-3\pm5}{8}\)
+\(x_1 = \frac{-3+5}{8} = \frac28 = \frac14\)
+\(x_2 = \frac{-3-5}{8} = \frac{-8}{8} = -1\)
+\end{quote}
+
+\hypertarget{casi-particolari}{%
+\subsection{Casi particolari}\label{casi-particolari}}
+
+\hypertarget{equazione-pura-coefficiente-di-b-0}{%
+\subsubsection{\texorpdfstring{Equazione pura (Coefficiente di
+\(b =0\))}{Equazione pura (Coefficiente di b =0)}}\label{equazione-pura-coefficiente-di-b-0}}
+
+\hypertarget{x2-40}{%
+\subparagraph{\texorpdfstring{\(x^2-4=0\)}{x\^{}2-4=0}}\label{x2-40}}
+
+\hypertarget{soluzione-metodo-tradizionale}{%
+\subparagraph{Soluzione (metodo
+tradizionale)}\label{soluzione-metodo-tradizionale}}
+
+\(\Delta = -4ac = 16\) \(x_{1/2}=\pm\frac{4}{2}\) \(x_1 = -2\)
+\(x_2 = 2\)
+
+\begin{quote}
+{[}!NOTE{]} Soluzione (metodo abbreviato) \(x^2 = 4\)
+\(\sqrt{x^2} = \pm\sqrt4\) \(x_{1/2} = \pm2\)
+\end{quote}
+
+\hypertarget{equazione-spuria-coefficente-di-c0}{%
+\subsubsection{\texorpdfstring{Equazione spuria (coefficente di
+\(c=0\))}{Equazione spuria (coefficente di c=0)}}\label{equazione-spuria-coefficente-di-c0}}
+
+\hypertarget{x2-7x0}{%
+\subparagraph{\texorpdfstring{\(x^2-7x=0\)}{x\^{}2-7x=0}}\label{x2-7x0}}
+
+\begin{quote}
+{[}!NOTE{]} Soluzione (metodo tradizionale) \(\Delta = 49\)
+\(x_{1/2}=\frac{7\pm7}{2}\) \(x_1 = 0\) \(x_2 = 7\)
+\end{quote}
+
+\begin{quote}
+{[}!NOTE{]} Soluzione (metodo abbreviato) \(x(x-7) = 0\)
+
+\(x_1 = 0\) \(x_2 = 7\)
+\end{quote}
+
+\end{document}
